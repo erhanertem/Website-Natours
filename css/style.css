@@ -37,6 +37,7 @@ body {
 	background-size: cover;
 	background-position: top;
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
 	position: relative;
 	/* for logo-box position */
 }
@@ -49,4 +50,42 @@ body {
 
 .logo {
 	height: 35px;
+}
+
+.text-box {
+	/* alignment via absolute */
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* alignment via flex */
+	/* 
+  height: 75vh;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+  */
+}
+
+.heading-primary {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.heading-primary-main {
+	display: block;
+
+	font-size: 60px;
+	font-weight: 400;
+	letter-spacing: 35px;
+	/* span elements are by nature inline needs display: block to be on top of each other */
+}
+
+.heading-primary-sub {
+	display: block;
+
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 17.4px;
+	/* span elements are by nature inline needs display: block to be on top of each other */
 }
