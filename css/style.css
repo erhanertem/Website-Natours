@@ -54,22 +54,23 @@ body {
 
 .text-box {
 	/* alignment via absolute */
-	position: absolute;
+	/* position: absolute;
 	top: 40%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); */
+	/* text-align: center; */
 	/* alignment via flex */
-	/* 
-  height: 75vh;
+	height: 75vh;
 	display: flex;
 	align-items: center;
-	justify-content: center; 
-  */
+	justify-content: center;
+	flex-direction: column;
 }
 
 .heading-primary {
 	color: #fff;
 	text-transform: uppercase;
+	margin-bottom: 60px;
 
 	/* conceals the animation artifacts */
 	/* as of 2022 can not experience the artifact phenamena in chrome browser */
@@ -78,11 +79,11 @@ body {
 
 .heading-primary-main {
 	display: block;
+	/* span elements are by nature inline needs display: block to be on top of each other */
 
 	font-size: 60px;
 	font-weight: 400;
 	letter-spacing: 35px;
-	/* span elements are by nature inline needs display: block to be on top of each other */
 
 	animation-name: moveInLeft;
 	animation-duration: 1s;
@@ -93,11 +94,11 @@ body {
 
 .heading-primary-sub {
 	display: block;
+	/* span elements are by nature inline needs display: block to be on top of each other */
 
 	font-size: 20px;
 	font-weight: 700;
 	letter-spacing: 17.4px;
-	/* span elements are by nature inline needs display: block to be on top of each other */
 
 	animation: moveInRight 1s ease-out;
 	/* animation-name: moveInRight;
@@ -136,4 +137,35 @@ body {
 		opacity: 1;
 		transform: translateX(0px);
 	}
+}
+
+/* we would like to style <a> tags for its both link and visited states */
+.btn:link,
+.btn:visited {
+	display: inline-block;
+	/* for <a> elements padding to work we would need inline-block */
+
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 15px 40px;
+	border-radius: 1000px;
+	transition: all 0.3s;
+	/* make everything available for smooth transitions @ the initial state (link,visited) for hover and active states */
+}
+
+.btn:hover {
+	transform: translateY(-3px);
+	/* Y top to bottom , we want to move up so takes neg value */
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+	transform: translateY(-1px);
+	/* Y top to bottom , we want to move up so takes neg value */
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+	background-color: #fff;
+	color: #777;
 }
