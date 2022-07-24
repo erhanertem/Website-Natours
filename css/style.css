@@ -139,6 +139,18 @@ body {
 	}
 }
 
+/* define moveInBottom named animation */
+@keyframes moveInBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
 /* we would like to style <a> tags for its both link and visited states */
 .btn:link,
 .btn:visited {
@@ -151,6 +163,9 @@ body {
 	border-radius: 1000px;
 	transition: all 0.3s;
 	/* make everything available for smooth transitions @ the initial state (link,visited) for hover and active states */
+
+	position: relative;
+	/* for btn::after pseudo element */
 }
 
 .btn:hover {
@@ -168,4 +183,36 @@ body {
 .btn-white {
 	background-color: #fff;
 	color: #777;
+}
+
+.btn::after {
+	content: "";
+	display: inline-block;
+	/* in pseudo elements content + inline-block need to be specified no matterwhat */
+	height: 100%;
+	width: 100%;
+	border-radius: 1000px;
+
+	/* set the pseudo element behind the button itself */
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	transition: all 0.4s;
+}
+
+.btn-white::after {
+	background-color: #fff;
+}
+
+/* after pseudo element @ btn:hover state */
+.btn:hover::after {
+	transform: scaleX(1.5) scaleY(1.6);
+	opacity: 0;
+}
+
+.btn-animated {
+	animation: moveInBottom 0.5s ease-out 0.5s;
+	animation-fill-mode: backwards;
 }
