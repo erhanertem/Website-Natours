@@ -16,14 +16,21 @@ Dark green: #28b485
 	box-sizing: border-box;
 }
 
+html {
+	/*root font size is always selected in the html element */
+	/* change default font-size=10px => 10/16*100=62.5% is now 1rem */
+	font-size: 62.5%;
+}
+
 /* universal override using inheritance of body element */
 body {
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
-	font-size: 16px;
+	/* font-size: 16px; */
+	/* we defined the 1rem=10px @ html body thats why font-size definition here became absolute */
 	line-height: 1.7;
 	color: #777;
-	padding: 30px;
+	padding: 3rem;
 }
 
 .header {
@@ -44,12 +51,12 @@ body {
 
 .logo-box {
 	position: absolute;
-	top: 40px;
-	left: 40px;
+	top: 4rem;
+	left: 4rem;
 }
 
 .logo {
-	height: 35px;
+	height: 3.5rem;
 }
 
 .text-box {
@@ -70,7 +77,7 @@ body {
 .heading-primary {
 	color: #fff;
 	text-transform: uppercase;
-	margin-bottom: 60px;
+	margin-bottom: 6rem;
 
 	/* conceals the animation artifacts */
 	/* as of 2022 can not experience the artifact phenamena in chrome browser */
@@ -81,9 +88,9 @@ body {
 	display: block;
 	/* span elements are by nature inline needs display: block to be on top of each other */
 
-	font-size: 60px;
+	font-size: 6rem;
 	font-weight: 400;
-	letter-spacing: 35px;
+	letter-spacing: 3.5rem;
 
 	animation-name: moveInLeft;
 	animation-duration: 1s;
@@ -96,9 +103,9 @@ body {
 	display: block;
 	/* span elements are by nature inline needs display: block to be on top of each other */
 
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: 700;
-	letter-spacing: 17.4px;
+	letter-spacing: 1.75rem;
 
 	animation: moveInRight 1s ease-out;
 	/* animation-name: moveInRight;
@@ -116,11 +123,11 @@ body {
 		/* could apply multiple transforms at the same time */
 	}
 	80% {
-		transform: translateX(10px);
+		transform: translateX(1rem);
 	}
 	100% {
 		opacity: 1;
-		transform: translateX(0px);
+		transform: translateX(0);
 	}
 }
 
@@ -128,14 +135,14 @@ body {
 @keyframes moveInRight {
 	0% {
 		opacity: 0;
-		transform: translateX(100px);
+		transform: translateX(10rem);
 	}
 	80% {
-		transform: translateX(-10px);
+		transform: translateX(-1rem);
 	}
 	100% {
 		opacity: 1;
-		transform: translateX(0px);
+		transform: translateX(0);
 	}
 }
 
@@ -143,11 +150,11 @@ body {
 @keyframes moveInBottom {
 	0% {
 		opacity: 0;
-		transform: translateY(30px);
+		transform: translateY(3rem);
 	}
 	100% {
 		opacity: 1;
-		transform: translateX(0px);
+		transform: translateY(0);
 	}
 }
 
@@ -159,8 +166,9 @@ body {
 
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 15px 40px;
-	border-radius: 1000px;
+	font-size: 1.6rem;
+	padding: 1.5rem 4rem;
+	border-radius: 100rem;
 	transition: all 0.3s;
 	/* make everything available for smooth transitions @ the initial state (link,visited) for hover and active states */
 
@@ -169,15 +177,15 @@ body {
 }
 
 .btn:hover {
-	transform: translateY(-3px);
+	transform: translateY(-0.3rem);
 	/* Y top to bottom , we want to move up so takes neg value */
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
-	transform: translateY(-1px);
+	transform: translateY(-0.1rem);
 	/* Y top to bottom , we want to move up so takes neg value */
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -191,7 +199,7 @@ body {
 	/* in pseudo elements content + inline-block need to be specified no matterwhat */
 	height: 100%;
 	width: 100%;
-	border-radius: 1000px;
+	border-radius: 100rem;
 
 	/* set the pseudo element behind the button itself */
 	position: absolute;
