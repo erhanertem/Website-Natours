@@ -157,25 +157,25 @@ body {
 	}
 }
 
-/* we would like to style <a> tags for its both link and visited states */
-.btn:link,
-.btn:visited {
-	display: inline-block;
-	/* for <a> elements padding to work we would need inline-block */
-
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: 1.6rem;
-	padding: 1.5rem 4rem;
-	border-radius: 100rem;
-	transition: all 0.3s;
-	/* make everything available for smooth transitions @ the initial state (link,visited) for hover and active states */
-
-	position: relative;
-	/* for btn::after pseudo element */
-}
-
 .btn {
+	/* we would like to style <a> tags for its both link and visited states */
+	&:link,
+	&:visited {
+		display: inline-block;
+		/* for <a> elements padding to work we would need inline-block */
+
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 1.6rem;
+		padding: 1.5rem 4rem;
+		border-radius: 100rem;
+		transition: all 0.3s;
+		/* make everything available for smooth transitions @ the initial state (link,visited) for hover and active states */
+
+		position: relative;
+		/* for btn::after pseudo element */
+	}
+
 	&:hover {
 		transform: translateY(-0.3rem);
 		/* Y top to bottom , we want to move up so takes neg value */
