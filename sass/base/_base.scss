@@ -1,1 +1,22 @@
 // partial files always start with an underscore
+
+//global definitions are rregistered here
+/* universal reset which includes after and before pseudo elements as well - we increased the spectrum of coverage */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	/* we moved the border-box definition to body and here provided inherit - its a better implementation */
+}
+
+html {
+	/*root font size is always selected in the html element */
+	/* change default font-size=10px => 10/16*100=62.5% is now 1rem */
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+}

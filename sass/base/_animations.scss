@@ -1,0 +1,46 @@
+// partial files always start with an underscore
+
+/* browsers are optimized only to work with opacity and transform properties */
+/* define moveInLeft named animation */
+@keyframes moveInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+		/* transform: translateX(-100px) rotate(45deg); */
+		/* could apply multiple transforms at the same time */
+	}
+	80% {
+		transform: translateX(1rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* define moveInRight named animation */
+@keyframes moveInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(10rem);
+	}
+	80% {
+		transform: translateX(-1rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* define moveInBottom named animation */
+@keyframes moveInBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(3rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

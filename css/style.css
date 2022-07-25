@@ -1,85 +1,3 @@
-/* universal reset which includes after and before pseudo elements as well - we increased the spectrum of coverage */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-  /* we moved the border-box definition to body and here provided inherit - its a better implementation */ }
-
-html {
-  /*root font size is always selected in the html element */
-  /* change default font-size=10px => 10/16*100=62.5% is now 1rem */
-  font-size: 62.5%; }
-
-/* universal override using inheritance of body element */
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  /* we defined the 1rem=10px @ html body thats why font-size definition here became absolute */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative;
-  /* for logo-box position */ }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    /* alignment via absolute */
-    /* position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%); */
-    /* text-align: center; */
-    /* alignment via flex */
-    height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-  /* conceals the animation artifacts */
-  /* as of 2022 can not experience the artifact phenamena in chrome browser */
-  backface-visibility: hidden; }
-  .heading-primary--main {
-    display: block;
-    /* span elements are by nature inline needs display: block to be on top of each other */
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    /* animation-iteration-count: 3; */
-    /* animation-delay: 3s; */ }
-  .heading-primary--sub {
-    display: block;
-    /* span elements are by nature inline needs display: block to be on top of each other */
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out;
-    /* animation-name: moveInRight;
-	animation-duration: 1s;
-	animation-timing-function: ease-out; */ }
-
 /* browsers are optimized only to work with opacity and transform properties */
 /* define moveInLeft named animation */
 @keyframes moveInLeft {
@@ -113,6 +31,62 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+/* universal reset which includes after and before pseudo elements as well - we increased the spectrum of coverage */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /* we moved the border-box definition to body and here provided inherit - its a better implementation */ }
+
+html {
+  /*root font size is always selected in the html element */
+  /* change default font-size=10px => 10/16*100=62.5% is now 1rem */
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+/* universal override using inheritance of body element */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  /* we defined the 1rem=10px @ html body thats why font-size definition here became absolute */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  /* conceals the animation artifacts */
+  /* as of 2022 can not experience the artifact phenamena in chrome browser */
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+    /* span elements are by nature inline needs display: block to be on top of each other */
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-iteration-count: 3; */
+    /* animation-delay: 3s; */ }
+  .heading-primary--sub {
+    display: block;
+    /* span elements are by nature inline needs display: block to be on top of each other */
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out;
+    /* animation-name: moveInRight;
+	animation-duration: 1s;
+	animation-timing-function: ease-out; */ }
 
 .btn {
   /* we would like to style <a> tags for its both link and visited states */ }
@@ -161,3 +135,31 @@ body {
   .btn--animated {
     animation: moveInBottom 0.5s ease-out 0.5s;
     animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  /* for logo-box position */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    /* alignment via absolute */
+    /* position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%); */
+    /* text-align: center; */
+    /* alignment via flex */
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }

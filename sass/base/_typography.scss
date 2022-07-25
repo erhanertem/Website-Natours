@@ -1,0 +1,52 @@
+// partial files always start with an underscore
+
+// mostly related to typography stuff , thats why its registered under this folder
+/* universal override using inheritance of body element */
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	/* font-size: 16px; */
+	/* we defined the 1rem=10px @ html body thats why font-size definition here became absolute */
+	line-height: 1.7;
+	color: $color-grey-dark;
+	padding: 3rem;
+}
+
+.heading-primary {
+	color: $color-white;
+	text-transform: uppercase;
+	margin-bottom: 6rem;
+
+	/* conceals the animation artifacts */
+	/* as of 2022 can not experience the artifact phenamena in chrome browser */
+	backface-visibility: hidden;
+
+	&--main {
+		display: block;
+		/* span elements are by nature inline needs display: block to be on top of each other */
+
+		font-size: 6rem;
+		font-weight: 400;
+		letter-spacing: 3.5rem;
+
+		animation-name: moveInLeft;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+		/* animation-iteration-count: 3; */
+		/* animation-delay: 3s; */
+	}
+
+	&--sub {
+		display: block;
+		/* span elements are by nature inline needs display: block to be on top of each other */
+
+		font-size: 2rem;
+		font-weight: 700;
+		letter-spacing: 1.75rem;
+
+		animation: moveInRight 1s ease-out;
+		/* animation-name: moveInRight;
+	animation-duration: 1s;
+	animation-timing-function: ease-out; */
+	}
+}
