@@ -1,13 +1,6 @@
-/*
-COLORS:
-
-text color: #777;
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
 
 /* universal reset which includes after and before pseudo elements as well - we increased the spectrum of coverage */
 *,
@@ -41,8 +34,8 @@ body {
 	height: 95vh;
 	background-image: linear-gradient(
 			to right bottom,
-			rgba(128, 214, 113, 0.8),
-			rgba(40, 180, 133, 0.8)
+			rgba($color-primary-light, 0.8),
+			rgba($color-primary-dark, 0.8)
 		),
 		url(../img/hero.jpg);
 	background-size: cover;
