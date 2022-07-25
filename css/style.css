@@ -9,11 +9,14 @@ Dark green: #28b485
 
 */
 
-/* universal reset */
-* {
+/* universal reset which includes after and before pseudo elements as well - we increased the spectrum of coverage */
+*,
+*::after,
+*::before {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: inherit;
+	/* we moved the border-box definition to body and here provided inherit - its a better implementation */
 }
 
 html {
@@ -31,6 +34,7 @@ body {
 	line-height: 1.7;
 	color: #777;
 	padding: 3rem;
+	box-sizing: border-box;
 }
 
 .header {
