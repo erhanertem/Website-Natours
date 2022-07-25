@@ -31,28 +31,25 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
   /* for logo-box position */ }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__text-box {
-  /* alignment via absolute */
-  /* position: absolute;
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    /* alignment via absolute */
+    /* position: absolute;
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%); */
-  /* text-align: center; */
-  /* alignment via flex */
-  height: 75vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
+    /* text-align: center; */
+    /* alignment via flex */
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
 
 .heading-primary {
   color: #fff;
@@ -61,27 +58,25 @@ body {
   /* conceals the animation artifacts */
   /* as of 2022 can not experience the artifact phenamena in chrome browser */
   backface-visibility: hidden; }
-
-.heading-primary--main {
-  display: block;
-  /* span elements are by nature inline needs display: block to be on top of each other */
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* animation-iteration-count: 3; */
-  /* animation-delay: 3s; */ }
-
-.heading-primary--sub {
-  display: block;
-  /* span elements are by nature inline needs display: block to be on top of each other */
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  animation: moveInRight 1s ease-out;
-  /* animation-name: moveInRight;
+  .heading-primary--main {
+    display: block;
+    /* span elements are by nature inline needs display: block to be on top of each other */
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-iteration-count: 3; */
+    /* animation-delay: 3s; */ }
+  .heading-primary--sub {
+    display: block;
+    /* span elements are by nature inline needs display: block to be on top of each other */
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out;
+    /* animation-name: moveInRight;
 	animation-duration: 1s;
 	animation-timing-function: ease-out; */ }
 
@@ -137,7 +132,11 @@ body {
 .btn:hover {
   transform: translateY(-0.3rem);
   /* Y top to bottom , we want to move up so takes neg value */
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  /* after pseudo element @ btn:hover state */ }
+  .btn:hover::after {
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.1rem);
@@ -147,6 +146,8 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -161,14 +162,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all 0.4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-/* after pseudo element @ btn:hover state */
-.btn:hover::after {
-  transform: scaleX(1.5) scaleY(1.6);
-  opacity: 0; }
 
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.5s;
