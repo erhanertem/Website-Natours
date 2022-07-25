@@ -53,17 +53,17 @@ body {
 	/* for logo-box position */
 }
 
-.logo-box {
+.header__logo-box {
 	position: absolute;
 	top: 4rem;
 	left: 4rem;
 }
 
-.logo {
+.header__logo {
 	height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
 	/* alignment via absolute */
 	/* position: absolute;
 	top: 40%;
@@ -88,7 +88,7 @@ body {
 	backface-visibility: hidden;
 }
 
-.heading-primary-main {
+.heading-primary--main {
 	display: block;
 	/* span elements are by nature inline needs display: block to be on top of each other */
 
@@ -103,7 +103,7 @@ body {
 	/* animation-delay: 3s; */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
 	display: block;
 	/* span elements are by nature inline needs display: block to be on top of each other */
 
@@ -192,7 +192,7 @@ body {
 	box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
 	background-color: #fff;
 	color: #777;
 }
@@ -214,7 +214,7 @@ body {
 	transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
 	background-color: #fff;
 }
 
@@ -224,7 +224,7 @@ body {
 	opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
 	animation: moveInBottom 0.5s ease-out 0.5s;
 	animation-fill-mode: backwards;
 }
