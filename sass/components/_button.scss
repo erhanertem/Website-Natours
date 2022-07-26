@@ -1,5 +1,6 @@
 // partial files always start with an underscore
-
+@import "../abstracts/variables";
+//
 // buttons are components of the site used repitetively thru out the project thats why it is registered under components section
 .btn {
 	/* we would like to style <a> tags for its both link and visited states */

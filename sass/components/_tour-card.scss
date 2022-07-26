@@ -1,9 +1,10 @@
 // partial files always start with an underscore
-
+@import "../abstracts/variables";
+//
 // 180 deg rotating pricing card schema
 .card {
 	// CARD FUNCTIONALITY
-	height: 50rem;
+	height: 52rem;
 	// perspective property is given to the parent element where position relative resides
 	perspective: 150rem;
 
@@ -11,7 +12,7 @@
 
 	&__side {
 		font-size: 2rem;
-		height: 50rem;
+		height: 52rem;
 		border-radius: 3px;
 		overflow: hidden;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
@@ -142,5 +143,21 @@
 	}
 
 	&__details {
+		padding: 3rem;
+		ul {
+			list-style: none;
+			width: 80%;
+			// display: block so best way to center is margin auto trick!
+			margin: 0 auto;
+			li {
+				text-align: center;
+				font-size: 1.5rem;
+				padding: 1rem;
+
+				&:not(:last-child) {
+					border-bottom: 1px solid $color-grey-light-2;
+				}
+			}
+		}
 	}
 }

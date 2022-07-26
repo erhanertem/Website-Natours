@@ -1,5 +1,6 @@
 // partial files always start with an underscore
-
+@import "../abstracts/variables";
+//
 // header is a layout element that is repeated across pages. So we put it under the layout category
 .header {
 	height: 95vh;
