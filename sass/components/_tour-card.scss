@@ -1,0 +1,65 @@
+// partial files always start with an underscore
+
+// 180 deg rotating pricing card schema
+.card {
+	height: 50rem;
+	// perspective property is given to the parent element where position relative resides
+	perspective: 150rem;
+
+	position: relative;
+
+	&__side {
+		color: #fff;
+		font-size: 2rem;
+		height: 50rem;
+		border-radius: 3px;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transition: all 0.8s ease;
+		backface-visibility: hidden;
+
+		&--front {
+			background-color: $color-white;
+		}
+
+		&--back {
+			transform: rotateY(180deg);
+
+			&-1 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-secondary-light-1,
+					$color-secondary-light-2
+				);
+			}
+
+			&-2 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-primary-light,
+					$color-primary-dark
+				);
+			}
+
+			&-3 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-tertiary-light-1,
+					$color-tertiary-light-2
+				);
+			}
+		}
+	}
+
+	// when we hover on the parent card I want the card__side childeren to be transformed
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+	}
+	&:hover &__side--back {
+		transform: rotateY(0);
+	}
+}
