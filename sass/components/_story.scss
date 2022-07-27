@@ -8,14 +8,10 @@
 	background-color: $color-white;
 	border-radius: 3px;
 	padding: 6rem;
-
+	padding-left: 9rem;
 	font-size: $default-font-size;
 	// skew the entire content of the frame
 	transform: skewX(-12deg);
-
-	&:not(:last-child) {
-		margin-bottom: 8rem;
-	}
 
 	// we have to take the direct childeren of the skew transform
 	& > * {
