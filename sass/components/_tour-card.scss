@@ -22,6 +22,7 @@
 		left: 0;
 		width: 100%;
 		transition: all 0.8s ease;
+		// hides the back-face of the card
 		backface-visibility: hidden;
 
 		&--front {
@@ -29,6 +30,7 @@
 		}
 
 		&--back {
+			// flipped back so the visibility hidden @ initial state
 			transform: rotateY(180deg);
 
 			&-1 {
@@ -57,12 +59,14 @@
 		}
 	}
 
-	// when we hover on the parent card I want the card__side childeren to be transformed
+	// when we hover on the parent card I want the card__side children to be transformed
 	&:hover &__side--front {
+		// turn the front face to back so it becomes invisible
 		transform: rotateY(-180deg);
 	}
 
 	&:hover &__side--back {
+		// turn the back face to front so it becomes visible
 		transform: rotateY(0);
 	}
 

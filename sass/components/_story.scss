@@ -1,0 +1,79 @@
+// partial files always start with an underscore
+@import "../abstracts/variables";
+//
+.story {
+	width: 75%;
+	margin: 0 auto;
+	box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+	background-color: $color-white;
+	border-radius: 3px;
+	padding: 6rem;
+
+	font-size: $default-font-size;
+	// skew the entire content of the frame
+	transform: skewX(-12deg);
+
+	&:not(:last-child) {
+		margin-bottom: 8rem;
+	}
+
+	// we have to take the direct childeren of the skew transform
+	& > * {
+		transform: skewX(12.01deg);
+	}
+
+	&__shape {
+		content: " ";
+		float: left;
+		width: 15rem;
+		height: 15rem;
+		// // shape-outside only works if there is float,width and height properties defined
+		// text wrapping the picture effect
+		margin: 2rem 2rem 2rem 0;
+		shape-outside: content-box circle(50% at 50% 50%);
+		shape-margin: 2rem;
+		clip-path: circle(50% at 50% 50%);
+
+		position: relative;
+	}
+
+	&__img {
+		height: 100%;
+		transform: translate(-4rem) scale(1.4);
+
+		transition: all 0.5s;
+		// fix glitch if any exists after transition
+		backface-visibility: hidden;
+	}
+
+	&__text {
+	}
+
+	&__caption {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		color: $color-white;
+		font-size: 1.7rem;
+		text-transform: uppercase;
+		text-align: center;
+		// INITAL STATE drop the text to a little close to bottom via 20%
+		transform: translate(-50%, 20%);
+		opacity: 0;
+		transition: all 0.5s;
+		// fix glitch if any exists after transition
+		backface-visibility: hidden;
+	}
+
+	// when hover over story ...
+	&:hover &__caption {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+
+	// when hover over story__img under story...
+	&:hover &__img {
+		transform: translate(-4rem) scale(1);
+		filter: blur(3px) brightness(80%);
+	}
+}
