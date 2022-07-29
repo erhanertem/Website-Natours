@@ -60,4 +60,9 @@
 	border-radius: 3px; // round corners of the background image
 	height: 50rem; // height of the background image content
 	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.25);
+
+	&__form {
+		width: 50%;
+		padding: 6rem;
+	}
 }
