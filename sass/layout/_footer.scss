@@ -1,3 +1,59 @@
 // partial files always start with an underscore
 @import "../abstracts/variables";
 //
+.footer {
+	background-color: $color-grey-dark-3;
+	padding: 10rem 0;
+	font-size: 1.4rem;
+
+	&__logo-box {
+		text-align: center;
+		margin-bottom: 8rem;
+	}
+
+	&__logo {
+		width: 15rem;
+		height: auto;
+	}
+
+	&__navigation {
+		border-top: 1px solid $color-grey-dark;
+		padding-top: 2rem;
+
+		display: inline-block; //occupies as the same width as the links
+	}
+
+	&__list {
+		list-style: none;
+	}
+
+	&__item {
+		display: inline-block;
+
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+			margin-right: 1.3rem;
+		}
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			color: $color-grey-light-1;
+			// background-color: $color-grey-dark-3;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			display: inline-block;
+
+			transition: all 0.2s;
+		}
+
+		&:hover,
+		&:active {
+			color: $color-primary;
+			text-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+			transform: rotate(5deg) scale(1.3);
+		}
+	}
+}
