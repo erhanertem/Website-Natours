@@ -53,9 +53,64 @@
 		transition: all 0.3s; //animates the opacity from this initial state
 	}
 
-	&__input:placeholder-shown + &__label {
+	&__input:placeholder-shown ~ &__label {
 		opacity: 0; //the element is still on the page but it is not visible
 		visibility: hidden; // the element is totally gone. We need to use opacity eventhough the visibility gets the job done since it is animatiable but not the visibility property.
 		transform: translateY(-4rem);
+	}
+
+	&__radio-group {
+		width: 49%;
+		display: inline-block;
+	}
+
+	&__radio-input {
+		display: none;
+		// display: none doesn't take space when the element is rendered. The others (visibility:hidden/opacity:0) still take the space normally.
+		// The visibility: hidden style behaves like a combination of opacity: 0 and pointer-events: none.
+	}
+
+	&__radio-label {
+		font-size: $default-font-size;
+		cursor: pointer;
+
+		position: relative; //complements __radio-button position: absolute as its the parent element
+		padding-left: 4.5rem;
+	}
+
+	&__radio-button {
+		display: inline-block; // the below properties wouldnt work without display set to block
+
+		height: 3rem;
+		width: 3rem;
+		border: 5px solid $color-primary;
+		border-radius: 50%;
+
+		position: absolute;
+		top: -0.5rem;
+		left: 0;
+
+		&::after {
+			content: ""; //for after or before pseudo elements is required
+			display: block; // the below properties wouldnt work without display set to block
+
+			background-color: $color-primary;
+			height: 1.3rem;
+			width: 1.3rem;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			// initial state they are concealed
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+	}
+
+	// select __radio-label's __radio-button::after pseudo element where __radio-label is the sibling of __radio-input which is in checked state
+	&__radio-input:checked ~ &__radio-label &__radio-button::after {
+		opacity: 1;
 	}
 }

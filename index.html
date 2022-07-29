@@ -393,8 +393,9 @@
 											type="radio"
 											name="size"
 										/>
-										<label class="form__radio-label" for="small"
-											>Small tour group</label
+										<label class="form__radio-label" for="small">
+											<span class="form__radio-button"></span>
+											Small tour group</label
 										>
 									</div>
 									<!-- 2nd BUTTON -->
@@ -406,8 +407,10 @@
 											name="size"
 										/>
 										<!-- we add name attribute to each radio button with the same name so only one gets selected -->
+										<!-- buttons could not be styled via CSS so we utilize a span element inside label and make the ugly input radio button button invisible and transfer the functionality of the span element -->
 										<label class="form__radio-label" for="large"
-											>Large tour group</label
+											><span class="form__radio-button"></span>Large tour
+											group</label
 										>
 									</div>
 								</div>
