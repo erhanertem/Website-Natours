@@ -41,5 +41,20 @@
 	}
 
 	&__label {
+		display: block;
+
+		font-size: 1.2rem;
+		font-weight: 700;
+		// without display this wont work for inline elements
+		margin-top: 0.7rem;
+		margin-left: 2rem;
+
+		transition: all 0.3s; //animates the opacity from this initial state
+	}
+
+	&__input:placeholder-shown + &__label {
+		opacity: 0; //the element is still on the page but it is not visible
+		visibility: hidden; // the element is totally gone. We need to use opacity eventhough the visibility gets the job done since it is animatiable but not the visibility property.
+		transform: translateY(-4rem);
 	}
 }
