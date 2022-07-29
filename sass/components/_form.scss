@@ -18,6 +18,7 @@
 		border: none;
 		border-bottom: 3px solid transparent;
 		// we add border bottom property on both conditions so that when we hop across inputs they wont nudge down
+		transition: all 0.3s;
 
 		// display block treats each form object in a seperate line
 		display: block;
