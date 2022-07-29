@@ -9,6 +9,8 @@
 	&__input {
 		// overrites default css font for the input element with the parent element's font-family
 		font-family: inherit;
+		color: inherit;
+
 		font-size: 1.5rem;
 		padding: 1.5rem 2rem;
 		border-radius: 2px;
@@ -26,6 +28,15 @@
 			outline: none;
 			box-shadow: 0 1rem 2rem ($color-black, 0.1);
 			border-bottom: 3px solid $color-primary;
+
+			// when you focus on an input and the input remains invalid then....
+			&:invalid {
+				border-bottom: 3px solid $color-secondary-dark;
+			}
+		}
+
+		&::placeholder {
+			color: $color-grey-dark-2;
 		}
 	}
 
