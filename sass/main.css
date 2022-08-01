@@ -775,6 +775,7 @@ body {
   top: 6.5rem;
   right: 6.5rem;
   z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .navigation__nav {
   height: 100vh;
@@ -783,6 +784,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1500;
+  transform: translateX(-50%);
   /* Hide the navigation */
   /* NOTE: Hide the elements - display: none is not animatable so we dont use it here */
   /* 1) Hide it visually but links seize to exist active */
@@ -791,6 +793,7 @@ body {
   pointer-events: none;
   /* 3)  Hide it from screen readers */
   visibility: hidden;
+  transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 .navigation__list {
   text-align: center;
@@ -823,6 +826,19 @@ body {
   background-position: 100%;
   color: #55c57a;
   transform: translateX(1rem);
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80);
+}
+.navigation__checkbox:checked ~ .navigation__nav {
+  transform: translateX(0);
+  /* Unhide the navigation */
+  /* 1) Unhide it visually */
+  opacity: 1;
+  /* 2) Make it accessible to mouse and keyboard */
+  pointer-events: auto;
+  /* 3)  Unhide it from screen readers */
+  visibility: visible;
 }
 
 .section-about {
