@@ -19,6 +19,8 @@
 		z-index: 2000;
 
 		box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+		text-align: center;
+		cursor: pointer;
 	}
 
 	&__background {
@@ -129,5 +131,48 @@
 		pointer-events: auto;
 		/* 3)  Unhide it from screen readers */
 		visibility: visible;
+	}
+
+	// NAV on/off ICON
+	&__icon {
+		position: relative;
+
+		margin-top: 3.4rem;
+
+		&,
+		&::before,
+		&::after {
+			display: inline-block;
+
+			width: 3rem;
+			height: 2px;
+			background-color: $color-grey-dark-3;
+		}
+
+		&::before,
+		&::after {
+			// before and after pseudo elements needs to have their content delared
+			content: "";
+			position: absolute;
+			left: 0;
+
+			transition: all 0.2s;
+		}
+
+		&::before {
+			top: -0.8rem; //nidge 1 line above
+		}
+
+		&::after {
+			top: 0.8rem; //nudge 1 line below
+		}
+	}
+
+	&__button:hover &__icon::before {
+		top: -1rem;
+	}
+
+	&__button:hover &__icon::after {
+		top: 1rem;
 	}
 }
