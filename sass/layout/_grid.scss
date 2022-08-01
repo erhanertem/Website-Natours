@@ -3,12 +3,13 @@
 .row {
 	max-width: $grid-width;
 	margin: 0 auto;
+
+	@include clearfix;
+
 	// except the last child all gets margin-bottom value
 	&:not(:last-child) {
 		margin-bottom: $gutter-vertical;
 	}
-
-	@include clearfix;
 
 	// for dry code of all col-***** select elements class that starts with col- , add common css properties and leave out the differing ones
 	[class^="col-"] {

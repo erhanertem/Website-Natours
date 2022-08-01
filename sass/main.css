@@ -667,13 +667,13 @@ body {
   max-width: 114rem;
   margin: 0 auto;
 }
-.row:not(:last-child) {
-  margin-bottom: 8rem;
-}
 .row::after {
   content: "";
   display: table;
   clear: both;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
 }
 .row [class^=col-] {
   float: left;
