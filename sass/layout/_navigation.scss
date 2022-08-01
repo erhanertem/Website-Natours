@@ -17,6 +17,8 @@
 		top: 6rem;
 		right: 6rem;
 		z-index: 2000;
+
+		box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
 	}
 
 	&__background {
@@ -34,7 +36,7 @@
 		right: 6.5rem;
 		z-index: 1000;
 
-		transform: scale(80);
+		// transform: scale(80);
 	}
 
 	&__nav {
@@ -45,6 +47,15 @@
 		top: 0;
 		left: 0;
 		z-index: 1500;
+
+		/* Hide the navigation */
+		/* NOTE: Hide the elements - display: none is not animatable so we dont use it here */
+		/* 1) Hide it visually but links seize to exist active */
+		opacity: 0;
+		/* 2) Make it unaccessible to mouse and keyboard */
+		pointer-events: none;
+		/* 3)  Hide it from screen readers */
+		visibility: hidden;
 	}
 
 	&__list {

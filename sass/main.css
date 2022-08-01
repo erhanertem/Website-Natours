@@ -764,6 +764,7 @@ body {
   top: 6rem;
   right: 6rem;
   z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
 }
 .navigation__background {
   height: 6rem;
@@ -774,7 +775,6 @@ body {
   top: 6.5rem;
   right: 6.5rem;
   z-index: 1000;
-  transform: scale(80);
 }
 .navigation__nav {
   height: 100vh;
@@ -783,6 +783,14 @@ body {
   top: 0;
   left: 0;
   z-index: 1500;
+  /* Hide the navigation */
+  /* NOTE: Hide the elements - display: none is not animatable so we dont use it here */
+  /* 1) Hide it visually but links seize to exist active */
+  opacity: 0;
+  /* 2) Make it unaccessible to mouse and keyboard */
+  pointer-events: none;
+  /* 3)  Hide it from screen readers */
+  visibility: hidden;
 }
 .navigation__list {
   text-align: center;
