@@ -53,7 +53,8 @@
 		transition: all 0.3s; //animates the opacity from this initial state
 	}
 
-	&__input:placeholder-shown ~ &__label {
+	// when the placeholder is shown the label is invisible and in order to animate placeholder text drop translated in Y axis above
+	&__input:placeholder-shown + &__label {
 		opacity: 0; //the element is still on the page but it is not visible
 		visibility: hidden; // the element is totally gone. We need to use opacity eventhough the visibility gets the job done since it is animatiable but not the visibility property.
 		transform: translateY(-4rem);
@@ -66,7 +67,7 @@
 
 	&__radio-input {
 		display: none;
-		// display: none doesn't take space when the element is rendered. The others (visibility:hidden/opacity:0) still take the space normally.
+		// <display: none> doesn't take space when the element is rendered. The others (visibility:hidden/opacity:0) still take the space normally.
 		// The visibility: hidden style behaves like a combination of opacity: 0 and pointer-events: none.
 	}
 
@@ -103,7 +104,7 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 
-			// initial state they are concealed
+			// initial state they are set to invisible
 			opacity: 0;
 			transition: opacity 0.3s;
 		}
