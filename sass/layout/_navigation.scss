@@ -1,3 +1,19 @@
 // partial files always start with an underscore
 @import "../abstracts/variables";
 //
+.navigation {
+	&__checkbox {
+	}
+	&__button {
+	}
+	&__background {
+	}
+	&__nav {
+	}
+	&__list {
+	}
+	&__item {
+	}
+	&__link {
+	}
+}
