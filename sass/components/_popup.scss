@@ -69,9 +69,10 @@
 
 		// set intitial state for the popup__content box animation
 		opacity: 0;
-		transform: translate(-50%, -50%) scale(0.5);
+		transform: translate(-50%, -50%) scale(0.3);
 		// IMPORTANT: since mixin absCenter also has a transform, needs to be included here as well otherwise one overrides another. Only one transform could live within a block!!
-		transition: all 0.3s;
+		transition: all 0.3s 0.3s;
+		//second timing is for the delay. With that black transparent background gets loaded first and popup appears the next.
 
 		display: table;
 		// this element acts as a table for the table cells below

@@ -683,8 +683,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0.5);
-  transition: all 0.3s;
+  transform: translate(-50%, -50%) scale(0.3);
+  transition: all 0.3s 0.3s;
   display: table;
 }
 .popup:target .popup__content {
