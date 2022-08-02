@@ -14,7 +14,7 @@
 html {
 	/*root font size is always selected in the html element */
 	/* change default font-size=10px => 10/16*100=62.5% is now 1rem */
-	font-size: 62.5%;
+	font-size: 62.5%; //1rem=10px
 
 	/* single media query call */
 	// @include respond-phone {
@@ -22,20 +22,31 @@ html {
 	// }
 
 	/* variable media query call */
-	@include respond(phone) {
-		font-size: 50%;
+	// @include respond(big-desktop) {
+	// 	font-size: 75%; // 1rem=12px, 12/16
+	// }
+	// @include respond(tab-land) {
+	// 	font-size: 56.25%; //1rem=9px, 9/16=50%
+	// }
+	// @include respond(tab-port) {
+	// 	font-size: 50%; //1rem=8px, 8/16=50%
+	// }
+	// @include respond(phone) {
+	// 	font-size: 30%; // 1rem=6px, 8/16=50%
+	// }
+
+	@include break($big-desktop) {
+		font-size: base-font-size(12px);
 	}
 
-	@include respond(tab-port) {
-		font-size: 60%;
+	// @ default between 1200 and 1800 we had 10px per 1 rem
+
+	@include break($tablet-landscape) {
+		font-size: base-font-size(9px);
 	}
 
-	@include respond(tab-land) {
-		font-size: 70%;
-	}
-
-	@include respond(big-desktop) {
-		font-size: 80%;
+	@include break($tablet-portrait) {
+		font-size: base-font-size(8px);
 	}
 }
 

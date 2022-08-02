@@ -44,25 +44,43 @@ $breakpoint arguments:
 */
 /* variable media query call */
 // NOTE: @if directive is a SASS logic processing statement like in any coding languages
-@mixin respond($breakpoint) {
-	@if $breakpoint == phone {
-		@media (max-width: 37.5em) {
+// @mixin respond($breakpoint) {
+// 	@if $breakpoint == phone {
+// 		@media (max-width: 37.5em) {
+// 			@content;
+// 		}
+// 	} // 600px --> 600/16=37.5
+// 	@if $breakpoint == tab-port {
+// 		@media (max-width: 56.25em) {
+// 			@content;
+// 		}
+// 	} // 900px
+// 	@if $breakpoint == tab-land {
+// 		@media (max-width: 75em) {
+// 			@content;
+// 		}
+// 	} // 1200px
+// 	@if $breakpoint == big-desktop {
+// 		@media (min-width: 112.5em) {
+// 			@content;
+// 		}
+// 	}
+// } // 1800px
+
+$phone: 600px;
+$tablet-portrait: 900px;
+$tablet-landscape: 1200px;
+$big-desktop: 1800px;
+
+@mixin break($breakpoint) {
+	@if $breakpoint <= $tablet-landscape {
+		@media (max-width: calc(calc($breakpoint/16px) * 1em)) {
 			@content;
 		}
-	} // 600px
-	@if $breakpoint == tab-port {
-		@media (max-width: 56.25em) {
-			@content;
-		}
-	} // 900px
-	@if $breakpoint == tab-land {
-		@media (max-width: 75em) {
-			@content;
-		}
-	} // 1200px
-	@if $breakpoint == big-desktop {
-		@media (min-width: 112.5em) {
+	} @else {
+		// anything above $tablet-landscape min-width
+		@media (min-width: calc(calc($breakpoint/16px) * 1em)) {
 			@content;
 		}
 	}
-} // 1800px
+}
