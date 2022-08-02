@@ -34,6 +34,29 @@
 		visibility: visible;
 	}
 
+	// popup close anchor link/button
+	&__clear {
+		&:link,
+		&:visited {
+			color: $color-grey-dark;
+			position: absolute;
+			top: 2.5rem;
+			right: 2.5rem;
+			font-size: 3rem;
+			line-height: $default-font-size;
+			text-decoration: none;
+
+			display: inline-block;
+
+			transition: all 0.3s;
+		}
+
+		&:hover,
+		&:active {
+			color: $color-primary;
+		}
+	}
+
 	&__content {
 		width: 75%;
 		border-radius: 3px;

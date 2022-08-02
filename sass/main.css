@@ -658,6 +658,20 @@ body {
   /* 3)  Hide it from screen readers */
   visibility: visible;
 }
+.popup__clear:link, .popup__clear:visited {
+  color: #777;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  line-height: 1.6rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.popup__clear:hover, .popup__clear:active {
+  color: #55c57a;
+}
 .popup__content {
   width: 75%;
   border-radius: 3px;
