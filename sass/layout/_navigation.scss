@@ -21,6 +21,15 @@
 		box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
 		text-align: center;
 		cursor: pointer;
+
+		@include break($tablet-portrait) {
+			top: 4rem;
+			right: 4rem;
+		}
+		@include break($phone) {
+			top: 3rem;
+			right: 3rem;
+		}
 	}
 
 	&__background {
@@ -37,6 +46,15 @@
 		top: 6.5rem;
 		right: 6.5rem;
 		z-index: 1000;
+
+		@include break($tablet-portrait) {
+			top: 4.5rem;
+			right: 4.5rem;
+		}
+		@include break($phone) {
+			top: 3.5rem;
+			right: 3.5rem;
+		}
 
 		transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 		// transform: scale(80);
