@@ -64,10 +64,24 @@
 		background-color: $color-white;
 		box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
 
+		// centerline to popup background
 		@include absCenter;
+
+		// set intitial state for the popup__content box animation
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.5);
+		// IMPORTANT: since mixin absCenter also has a transform, needs to be included here as well otherwise one overrides another. Only one transform could live within a block!!
+		transition: all 0.3s;
 
 		display: table;
 		// this element acts as a table for the table cells below
+	}
+
+	// when popup gets targetted the popup__content gets...
+	&:target &__content {
+		// set intitial state for the popup__content box animation
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
 	}
 
 	&__left {

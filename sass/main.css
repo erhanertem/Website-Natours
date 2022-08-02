@@ -682,7 +682,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: all 0.3s;
   display: table;
+}
+.popup:target .popup__content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 .popup__left {
   width: 33.35%;
