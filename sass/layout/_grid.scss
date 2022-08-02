@@ -6,9 +6,17 @@
 
 	@include clearfix;
 
+	@include break($tablet-portrait) {
+		max-width: 50rem;
+	}
+
 	// except the last child all gets margin-bottom value
 	&:not(:last-child) {
 		margin-bottom: $gutter-vertical;
+
+		@include break($tablet-portrait) {
+			margin-bottom: $gutter-vertical-small;
+		}
 	}
 
 	// for dry code of all col-***** select elements class that starts with col- , add common css properties and leave out the differing ones
@@ -17,6 +25,15 @@
 
 		&:not(:last-child) {
 			margin-right: $gutter-horizontal;
+
+			@include break($tablet-portrait) {
+				margin-right: 0;
+				margin-bottom: $gutter-vertical-small;
+			}
+		}
+
+		@include break($tablet-portrait) {
+			width: 100% !important;
 		}
 	}
 
