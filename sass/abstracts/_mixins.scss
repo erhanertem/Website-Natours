@@ -67,11 +67,6 @@ $breakpoint arguments:
 // 	}
 // } // 1800px
 
-$phone: 600px;
-$tablet-portrait: 900px;
-$tablet-landscape: 1200px;
-$big-desktop: 1800px;
-
 @mixin break($breakpoint) {
 	@if $breakpoint <= $tablet-landscape {
 		@media (max-width: calc(calc($breakpoint/16px) * 1em)) {
