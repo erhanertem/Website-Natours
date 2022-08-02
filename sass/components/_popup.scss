@@ -11,6 +11,29 @@
 	top: 0;
 	left: 0;
 
+	/* Hide the popup @ initial state */
+	/* NOTE: Hide the elements - display: none is not animatable so we dont use it here */
+	/* 1) Hide it visually but links seize to exist active */
+	opacity: 0;
+	/* 2) Make it unaccessible to mouse and keyboard */
+	pointer-events: none;
+	/* 3)  Hide it from screen readers */
+	visibility: hidden;
+
+	transition: all 0.3s;
+
+	// target pseudo class is selected when an anchor element is clicked with a corresponding #target id
+	&:target {
+		/* Unhide the popup after anchot element clicked */
+		/* NOTE: Hide the elements - display: none is not animatable so we dont use it here */
+		/* 1) Hide it visually but links seize to exist active */
+		opacity: 1;
+		/* 2) Make it unaccessible to mouse and keyboard */
+		pointer-events: auto;
+		/* 3)  Hide it from screen readers */
+		visibility: visible;
+	}
+
 	&__content {
 		width: 75%;
 		border-radius: 3px;

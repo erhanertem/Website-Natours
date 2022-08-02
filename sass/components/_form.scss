@@ -67,7 +67,7 @@
 
 	&__radio-input {
 		display: none;
-		// <display: none> doesn't take space when the element is rendered. The others (visibility:hidden/opacity:0) still take the space normally.
+		// <display: none> doesn't take space when the element is rendered. Note that its not animatiable. The others (visibility:hidden/opacity:0) still take the space normally.
 		// The visibility: hidden style behaves like a combination of opacity: 0 and pointer-events: none.
 	}
 
