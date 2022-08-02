@@ -16,7 +16,7 @@ body {
 	color: $color-white;
 	text-transform: uppercase;
 	margin-bottom: 6rem;
-
+	text-align: center;
 	/* conceals the animation artifacts */
 	/* as of 2022 can not experience the artifact phenamena in chrome browser */
 	backface-visibility: hidden;
@@ -25,9 +25,14 @@ body {
 		display: block;
 		/* span elements are by nature inline needs display: block to be on top of each other */
 
-		font-size: 6rem;
 		font-weight: 400;
+		font-size: 6rem;
 		letter-spacing: 3.5rem;
+
+		@include break($phone) {
+			font-size: 5rem;
+			letter-spacing: 1rem;
+		}
 
 		animation-name: moveInLeft;
 		animation-duration: 1s;
@@ -40,9 +45,13 @@ body {
 		display: block;
 		/* span elements are by nature inline needs display: block to be on top of each other */
 
-		font-size: 2rem;
 		font-weight: 700;
+		font-size: 2rem;
 		letter-spacing: 1.75rem;
+
+		@include break($phone) {
+			letter-spacing: 0.5rem;
+		}
 
 		animation: moveInRight 1s ease-out;
 		/* animation-name: moveInRight;
@@ -66,6 +75,13 @@ body {
 	background-clip: text;
 	color: transparent;
 	// makes text transparent so that clipped background thru text is visible
+
+	@include break($tablet-portrait) {
+		font-size: 3rem;
+	}
+	@include break($phone) {
+		font-size: 2.5rem;
+	}
 
 	transition: all 0.2s;
 

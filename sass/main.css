@@ -160,6 +160,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem;
+  text-align: center;
   /* conceals the animation artifacts */
   /* as of 2022 can not experience the artifact phenamena in chrome browser */
   -webkit-backface-visibility: hidden;
@@ -168,8 +169,8 @@ body {
 .heading-primary--main {
   display: block;
   /* span elements are by nature inline needs display: block to be on top of each other */
-  font-size: 6rem;
   font-weight: 400;
+  font-size: 6rem;
   letter-spacing: 3.5rem;
   -webkit-animation-name: moveInLeft;
           animation-name: moveInLeft;
@@ -180,17 +181,28 @@ body {
   /* animation-iteration-count: 3; */
   /* animation-delay: 3s; */
 }
+@media (max-width: 37.5em) {
+  .heading-primary--main {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+  }
+}
 .heading-primary--sub {
   display: block;
   /* span elements are by nature inline needs display: block to be on top of each other */
-  font-size: 2rem;
   font-weight: 700;
+  font-size: 2rem;
   letter-spacing: 1.75rem;
   -webkit-animation: moveInRight 1s ease-out;
           animation: moveInRight 1s ease-out;
   /* animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
+}
+@media (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: 0.5rem;
+  }
 }
 
 .heading-secondary {
@@ -203,6 +215,16 @@ body {
           background-clip: text;
   color: transparent;
   transition: all 0.2s;
+}
+@media (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
 }
 .heading-secondary:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
