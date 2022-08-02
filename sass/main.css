@@ -15,6 +15,12 @@ $breakpoint arguments:
 
 1 em = 16px
 
+ORDER implementing mediaquery:
+1. Base+typography
+2. general layout+grid
+3. page layout
+4. components
+
 */
 /* variable media query call */
 /* browsers are optimized only to work with opacity and transform properties */
@@ -109,10 +115,10 @@ $breakpoint arguments:
 
 html {
   /*root font size is always selected in the html element */
-  /* single media query call */
-  /* variable media query call */
   /* change default font-size=10px => 10/16*100=62.5% is now 1rem */
   font-size: 62.5%;
+  /* single media query call */
+  /* variable media query call */
 }
 @media (min-width: 112.5em) {
   html {
@@ -132,6 +138,12 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
 }
 
 /* universal override using inheritance of body element */
@@ -142,7 +154,6 @@ body {
   /* we defined the 1rem=10px @ html body thats why font-size definition here became absolute */
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
 }
 
 .heading-primary {

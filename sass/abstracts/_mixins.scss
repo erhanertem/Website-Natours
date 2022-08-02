@@ -41,6 +41,12 @@ $breakpoint arguments:
 
 1 em = 16px
 
+ORDER implementing mediaquery:
+1. Base+typography
+2. general layout+grid
+3. page layout
+4. components
+
 */
 /* variable media query call */
 // NOTE: @if directive is a SASS logic processing statement like in any coding languages
