@@ -1,3 +1,19 @@
+/*
+0-600px         --> PHONE
+600-900px       --> TABLET PORTRAIT
+900-1200px      --> TABLET LANDSCAPE
+[1200px-1800px] --> OUR NORMAL STYLE / REGULAR DESKTOP
+1800px+         --> BIG DESKTOP
+*/
+/* single media query call */
+/*
+$breakpoint arguments:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
+/* variable media query call */
 /* browsers are optimized only to work with opacity and transform properties */
 /* define moveInLeft named animation */
 @-webkit-keyframes moveInLeft {
@@ -92,6 +108,13 @@ html {
   /*root font size is always selected in the html element */
   /* change default font-size=10px => 10/16*100=62.5% is now 1rem */
   font-size: 62.5%;
+  /* single media query call */
+  /* variable media query call */
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {

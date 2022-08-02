@@ -15,6 +15,16 @@ html {
 	/*root font size is always selected in the html element */
 	/* change default font-size=10px => 10/16*100=62.5% is now 1rem */
 	font-size: 62.5%;
+
+	/* single media query call */
+	// @include respond-phone {
+	// 	font-size: 50%;
+	// }
+
+	/* variable media query call */
+	@include respond(phone) {
+		font-size: 50%;
+	}
 }
 
 body {

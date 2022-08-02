@@ -14,3 +14,52 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERY MANAGEMENT
+/*
+0-600px         --> PHONE
+600-900px       --> TABLET PORTRAIT
+900-1200px      --> TABLET LANDSCAPE
+[1200px-1800px] --> OUR NORMAL STYLE / REGULAR DESKTOP
+1800px+         --> BIG DESKTOP
+*/
+
+//NOTE: @content directive is a SASS placeholder which refers to what ever we typed @include respond-phone {....}
+/* single media query call */
+// @mixin respond-phone {
+// 	@media (max-width: 600px) {
+// 		@content;
+// 	}
+// }
+
+/*
+$breakpoint arguments:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
+/* variable media query call */
+// NOTE: @if directive is a SASS logic processing statement like in any coding languages
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 600px) {
+			@content;
+		}
+	}
+	@if $breakpoint == tab-port {
+		@media (max-width: 900px) {
+			@content;
+		}
+	}
+	@if $breakpoint == tab-land {
+		@media (max-width: 1200px) {
+			@content;
+		}
+	}
+	@if $breakpoint == big-desktop {
+		@media (min-width: 1800px) {
+			@content;
+		}
+	}
+}
