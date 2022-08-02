@@ -13,8 +13,6 @@
 
 html {
 	/*root font size is always selected in the html element */
-	/* change default font-size=10px => 10/16*100=62.5% is now 1rem */
-	font-size: 62.5%; //1rem=10px
 
 	/* single media query call */
 	// @include respond-phone {
@@ -37,17 +35,19 @@ html {
 
 	@include break($big-desktop) {
 		font-size: base-font-size(12px);
-	}
+	} //75%
 
 	// @ default between 1200 and 1800 we had 10px per 1 rem
+	/* change default font-size=10px => 10/16*100=62.5% is now 1rem */
+	font-size: 62.5%; //1rem=10px
 
 	@include break($tablet-landscape) {
 		font-size: base-font-size(9px);
-	}
+	} //56.25%
 
 	@include break($tablet-portrait) {
 		font-size: base-font-size(8px);
-	}
+	} //50%
 }
 
 body {

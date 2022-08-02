@@ -109,10 +109,10 @@ $breakpoint arguments:
 
 html {
   /*root font size is always selected in the html element */
-  /* change default font-size=10px => 10/16*100=62.5% is now 1rem */
-  font-size: 62.5%;
   /* single media query call */
   /* variable media query call */
+  /* change default font-size=10px => 10/16*100=62.5% is now 1rem */
+  font-size: 62.5%;
 }
 @media (min-width: 112.5em) {
   html {
