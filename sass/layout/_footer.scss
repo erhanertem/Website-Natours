@@ -6,6 +6,10 @@
 	padding: 10rem 0;
 	font-size: 1.4rem;
 
+	@include break($tablet-portrait) {
+		padding: 8rem 0;
+	}
+
 	&__logo-box {
 		text-align: center;
 		margin-bottom: 8rem;
@@ -21,6 +25,11 @@
 		padding-top: 2rem;
 
 		display: inline-block; //occupies as the same width as the links
+
+		@include break($tablet-portrait) {
+			width: 100%;
+			text-align: center;
+		}
 	}
 
 	&__list {
@@ -62,5 +71,9 @@
 		padding-top: 2rem;
 		width: 80%;
 		float: right;
+
+		@include break($tablet-portrait) {
+			width: 100%;
+		}
 	}
 }

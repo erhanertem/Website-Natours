@@ -9,6 +9,9 @@
 	@include break($tablet-portrait) {
 		max-width: 50rem;
 	}
+	@include break($phone) {
+		padding: 0 3rem;
+	}
 
 	// except the last child all gets margin-bottom value
 	&:not(:last-child) {
