@@ -99,10 +99,11 @@
 			height: 1.3rem;
 			width: 1.3rem;
 			border-radius: 50%;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			@include absCenter;
+			// position: absolute;
+			// top: 50%;
+			// left: 50%;
+			// transform: translate(-50%, -50%);
 
 			// initial state they are set to invisible
 			opacity: 0;

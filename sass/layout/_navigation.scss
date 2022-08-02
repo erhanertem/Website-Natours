@@ -70,10 +70,11 @@
 		text-align: center;
 		list-style: none;
 
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		@include absCenter;
+		// position: absolute;
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
 	}
 
 	&__item {
@@ -179,10 +180,12 @@
 	&__checkbox:checked + &__button &__icon {
 		background-color: transparent;
 	}
+
 	&__checkbox:checked + &__button &__icon::after {
 		top: 0;
 		transform: rotate(45deg);
 	}
+
 	&__checkbox:checked + &__button &__icon::before {
 		top: 0;
 		transform: rotate(-45deg);

@@ -167,10 +167,11 @@
 
 	// TOUR CARD BACK SIDE STYLING
 	&__cta {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		@include absCenter;
+		// position: absolute;
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
 		text-align: center;
 		// to fix squeezed button with 2 rows of text
 		width: 90%;
