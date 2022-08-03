@@ -11,7 +11,7 @@
 	position: relative;
 
 	&__side {
-		font-size: 2rem;
+		// font-size: 2rem;
 		height: 52rem;
 		border-radius: 3px;
 		overflow: hidden;
@@ -21,6 +21,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
+
 		transition: all 0.8s ease;
 		// hides the back-face of the card
 		backface-visibility: hidden;
@@ -148,11 +149,13 @@
 
 	&__details {
 		padding: 3rem;
+
 		ul {
 			list-style: none;
 			width: 80%;
 			// display: block so best way to center is margin auto trick!
 			margin: 0 auto;
+
 			li {
 				text-align: center;
 				font-size: 1.5rem;
@@ -191,5 +194,71 @@
 	&__price-value {
 		font-size: 6rem;
 		font-weight: 100;
+	}
+
+	//very dramatic changes here - almost a rewrite of the entire section based on mobile touch experience
+	// __card's media query
+	@include break($tablet-portrait) {
+		height: auto;
+		background-color: $color-white;
+		// the back&front cards gets together the box shadow
+		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+		// the back&front cards gets together the border radius
+		border-radius: 3px;
+
+		&__side {
+			height: auto;
+			position: relative;
+			// remove the box shadow on the front card and apply at the top for the whole cards in mobile version
+			box-shadow: none;
+
+			&--front {
+				// margin: 1rem 0;
+				border-bottom-right-radius: 0px;
+				border-bottom-left-radius: 0px;
+			}
+
+			&--back {
+				// flipped back so the visibility hidden @ initial state
+				transform: rotateY(0);
+				border-top-right-radius: 0px;
+				border-top-left-radius: 0px;
+				clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+			}
+		}
+
+		// when we hover on the parent card I want the card__side children to be transformed
+		&:hover &__side--front {
+			// turn the front face to back so it becomes invisible
+			transform: rotateY(0);
+		}
+
+		&__details {
+			padding: 1rem 3rem;
+		}
+
+		// TOUR CARD BACK SIDE STYLING
+		&__cta {
+			position: relative;
+			top: 0;
+			left: 0;
+			transform: translate(0);
+			// position: absolute;
+			// top: 50%;
+			// left: 50%;
+			// transform: translate(-50%, -50%);
+			// to fix squeezed button with 2 rows of text
+			width: 100%;
+			padding: 7rem 4rem 4rem 4rem;
+		}
+
+		&__price-box {
+			margin-bottom: 3rem;
+		}
+
+		&__price-value {
+			font-size: 4rem;
+			font-weight: 100;
+		}
 	}
 }
