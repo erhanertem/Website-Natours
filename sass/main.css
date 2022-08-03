@@ -648,6 +648,8 @@ body {
 @media (max-width: 37.5em) {
   .story {
     transform: skewX(0);
+    width: 100%;
+    margin: 0 auto;
   }
 }
 .story > * {

@@ -20,6 +20,8 @@
 	}
 	@include break($phone) {
 		transform: skewX(0);
+		width: 100%;
+		margin: 0 auto;
 	}
 
 	// we have to take the direct childeren of the skew transform
