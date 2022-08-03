@@ -489,11 +489,23 @@
 
 		<footer class="footer">
 			<div class="footer__logo-box">
-				<img
-					src="./img/logo-green-2x.png"
-					alt="Full logo"
-					class="footer__logo"
-				/>
+				<picture class="footer__logo">
+					<!-- source fpr phones below 600px uses small logo -->
+					<source
+						srcset="
+							img/logo-green-small-1x.png 1x,
+							img/logo-green-small-2x.png 2x
+						"
+						media="(max-width: 37.5em)"
+					/>
+					<!-- img above 600px screen sizes use below -->
+					<!-- src replaced by srcset attribute allows us to set multiple resolution images in one go such as sets x1 hdr screens with -1x version of the img and 2x descriptor sets the other -->
+					<img
+						class="footer__logo"
+						srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+						alt="Full logo"
+					/>
+				</picture>
 			</div>
 			<div class="row">
 				<!-- left wing -->
