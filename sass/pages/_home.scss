@@ -99,7 +99,7 @@
 		padding: 6rem;
 
 		@include break($tablet-landscape) {
-			width: 60%;
+			width: 75%;
 		}
 		@include break($tablet-portrait) {
 			width: 100%;

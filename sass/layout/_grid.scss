@@ -13,6 +13,15 @@
 		padding: 0 3rem;
 	}
 
+	&__tab-portrait {
+		@include break($tablet-portrait) {
+			max-width: 75rem;
+		}
+		@include break($phone) {
+			max-width: 65rem;
+		}
+	}
+
 	// except the last child all gets margin-bottom value
 	&:not(:last-child) {
 		margin-bottom: $gutter-vertical;

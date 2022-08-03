@@ -993,6 +993,16 @@ body {
     padding: 0 3rem;
   }
 }
+@media (max-width: 56.25em) {
+  .row__tab-portrait {
+    max-width: 75rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .row__tab-portrait {
+    max-width: 65rem;
+  }
+}
 .row:not(:last-child) {
   margin-bottom: 8rem;
 }
@@ -1339,7 +1349,7 @@ body {
 }
 @media (max-width: 75em) {
   .book__form {
-    width: 60%;
+    width: 75%;
   }
 }
 @media (max-width: 56.25em) {
