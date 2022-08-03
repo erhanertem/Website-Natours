@@ -73,8 +73,36 @@
 	height: 50rem; // height of the background image content
 	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.25);
 
+	@include break($tablet-landscape) {
+		background-image: linear-gradient(
+				105deg,
+				rgba($color-white, 0.9) 0%,
+				rgba($color-white, 0.9) 60%,
+				transparent 60%
+			),
+			url(../../img/nat-10.jpg);
+		background-size: cover;
+		margin: 0 8rem 0 8rem;
+	}
+	@include break($tablet-portrait) {
+		background-image: linear-gradient(
+				105deg,
+				rgba($color-white, 0.9) 0%,
+				rgba($color-white, 0.9) 100%
+			),
+			url(../../img/nat-10.jpg);
+		margin: 0rem;
+	}
+
 	&__form {
 		width: 50%;
 		padding: 6rem;
+
+		@include break($tablet-landscape) {
+			width: 60%;
+		}
+		@include break($tablet-portrait) {
+			width: 100%;
+		}
 	}
 }

@@ -4,6 +4,10 @@
 .form {
 	&__group:not(:last-child) {
 		margin-bottom: 2rem;
+
+		@include break($tablet-portrait) {
+			margin-bottom: 0.5rem;
+		}
 	}
 
 	&__input {
@@ -23,6 +27,10 @@
 		// display block treats each form object in a seperate line
 		display: block;
 		width: 80%;
+
+		@include break($tablet-portrait) {
+			width: 100%;
+		}
 
 		&:focus {
 			// disables the generic focus event highlighter behaviour
@@ -63,6 +71,11 @@
 	&__radio-group {
 		width: 49%;
 		display: inline-block;
+
+		@include break($tablet-portrait) {
+			width: 100%;
+			margin-bottom: 1rem;
+		}
 	}
 
 	&__radio-input {
