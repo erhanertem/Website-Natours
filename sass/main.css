@@ -441,6 +441,11 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
 }
+@media (max-width: 56.25em) {
+  .feature-box {
+    padding: 1.8rem;
+  }
+}
 .feature-box:hover {
   transform: translateY(-1.5rem) scale(1.03);
 }
@@ -452,6 +457,11 @@ body {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+}
+@media (max-width: 56.25em) {
+  .feature-box__icon {
+    margin-bottom: 0;
+  }
 }
 
 .card {
@@ -1185,6 +1195,11 @@ body {
   background-size: cover;
   background-position: top;
   transform: skewY(-7deg);
+}
+@media (max-width: 56.25em) {
+  .section-features {
+    padding: 12rem 0;
+  }
 }
 .section-features > * {
   transform: skewY(7deg);

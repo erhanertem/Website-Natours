@@ -21,6 +21,10 @@
 
 	transform: skewY(-7deg);
 
+	@include break($tablet-portrait) {
+		padding: 12rem 0;
+	}
+
 	// select all direct children of section-features which is row only elements
 	& > * {
 		transform: skewY(7deg);

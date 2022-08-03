@@ -10,6 +10,10 @@
 	// fluent transition back to original
 	transition: transform 0.3s;
 
+	@include break($tablet-portrait) {
+		padding: 1.8rem;
+	}
+
 	&:hover {
 		transform: translateY(-1.5rem) scale(1.03);
 	}
@@ -27,5 +31,9 @@
 		);
 		background-clip: text;
 		color: transparent;
+
+		@include break($tablet-portrait) {
+			margin-bottom: 0;
+		}
 	}
 }
