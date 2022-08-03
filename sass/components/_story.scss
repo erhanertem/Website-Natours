@@ -13,13 +13,22 @@
 	// skew the entire content of the frame
 	transform: skewX(-12deg);
 
+	@include break($tablet-portrait) {
+		margin: 0 -8.5rem;
+		width: 135%;
+		padding: 4rem;
+	}
+	@include break($phone) {
+		transform: skewX(0);
+	}
+
 	// we have to take the direct childeren of the skew transform
 	& > * {
 		transform: skewX(12.01deg);
 	}
 
 	&__shape {
-		content: " ";
+		content: "";
 		float: left;
 		width: 15rem;
 		height: 15rem;
@@ -31,6 +40,10 @@
 		clip-path: circle(50% at 50% 50%);
 
 		position: relative;
+
+		@include break($phone) {
+			transform: skewX(0);
+		}
 	}
 
 	&__img {
@@ -43,6 +56,9 @@
 	}
 
 	&__text {
+		@include break($phone) {
+			transform: skewX(0);
+		}
 	}
 
 	&__caption {
