@@ -660,6 +660,7 @@ body {
   float: left;
   width: 15rem;
   height: 15rem;
+  border-radius: 50%;
   overflow: hidden;
   position: relative;
 }
