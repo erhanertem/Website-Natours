@@ -127,6 +127,8 @@
 					<!-- ABOUT SECTION - IMAGE COMPOSITION BLOCK -->
 					<div class="col-1-of-2">
 						<div class="composition">
+							<!-- RESOLUTION SWITCHING IMAGE OPERATION -->
+							<!-- This method do not use picture and source tags but make use of attributes [srcset] and [size] media conditions -->
 							<img
 								class="composition__photo composition__photo--p1"
 								alt="Photo 1"
@@ -514,6 +516,8 @@
 
 		<footer class="footer">
 			<div class="footer__logo-box">
+				<!-- ART DIRECTION RESPONSIVE IMAGE APPLICATION -->
+				<!-- ART Direction utilizes picture and source elements for differing breakpoint conditions -->
 				<picture class="footer__logo">
 					<!-- source for phones below 600px uses small logo -->
 					<!-- resolution switching and inside it applies density switching -->
@@ -524,12 +528,18 @@
 						"
 						media="(max-width: 37.5em)"
 					/>
+					<!-- second media query source condition if neeeded as below -->
+					<!-- <source
+						srcset="img/logo-white.png 1x, img/logo-white.png 2x"
+						media="(max-width: 56.25em)"
+					/> -->
 					<!-- img above 600px screen sizes use below -->
 					<!-- inside it applies density switching -->
 					<!-- src replaced by srcset attribute allows us to set multiple resolution images in one go such as sets x1 hdr screens with -1x version of the img and 2x descriptor sets the other -->
 					<img
 						class="footer__logo"
 						srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+						src="img/logo-green-2x.png"
 						alt="Full logo"
 					/>
 				</picture>
