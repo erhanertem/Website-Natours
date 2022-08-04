@@ -3,7 +3,7 @@
 //
 // header is a layout element that is repeated across pages. So we put it under the layout category
 .header {
-	height: 95vh;
+	height: 85vh;
 	background-image: linear-gradient(
 			to right bottom,
 			rgba($color-primary-light, 0.8),
@@ -12,7 +12,13 @@
 		url(../img/hero-small.jpg);
 	background-size: cover;
 	background-position: top;
-	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+	// if clippath either form is supported by the browser implement clip-path
+	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		height: 95vh;
+	}
 
 	position: relative;
 	/* for logo-box position */
