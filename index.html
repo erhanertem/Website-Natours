@@ -129,19 +129,44 @@
 						<div class="composition">
 							<img
 								class="composition__photo composition__photo--p1"
-								src="/img/nat-1-large.jpg"
 								alt="Photo 1"
+								srcset="img/nat-1.jpg 300w, img/nat-1-large 1000w"
+								size="(max-width: 900px) 18vw, (max-width: 600px) 24vw, 297px"
+								src="img/nat-1-large.jpg"
 							/>
+							<!-- 297px width of img at 1200px+ breakpoint defaults      -->
+							<!-- 160px width of img at 900px breakpoint. 160/900 ~ 18vw -->
+							<!-- 140px width of img at 600px breakpoint. 140/600 ~ 24vw -->
 							<img
+								class="composition__photo composition__photo--p2"
+								alt="Photo 2"
+								srcset="img/nat-2.jpg 300w, img/nat-2-large 1000w"
+								size="(max-width: 900px) 19vw, (max-width: 600px) 26vw, 297px"
+								src="img/nat-2-large.jpg"
+							/>
+							<!-- 297px width of img at 1200px+ breakpoint defaults      -->
+							<!-- 173px width of img at 900px breakpoint. 173/900 ~ 19vw -->
+							<!-- 153px width of img at 600px breakpoint. 153/600 ~ 26vw -->
+							<!-- <img
 								class="composition__photo composition__photo--p2"
 								src="/img/nat-2-large.jpg"
 								alt="Photo 2"
-							/>
+								/> -->
 							<img
+								class="composition__photo composition__photo--p3"
+								alt="Photo 3"
+								srcset="img/nat-3.jpg 300w, img/nat-3-large 1000w"
+								size="(max-width: 900px) 16vw, (max-width: 600px) 22vw, 297px"
+								src="img/nat-3-large.jpg"
+							/>
+							<!-- 297px width of img at 1200px+ breakpoint defaults      -->
+							<!-- 147px width of img at 900px breakpoint. 147/900 ~ 16vw -->
+							<!-- 129px width of img at 600px breakpoint. 129/600 ~ 22vw -->
+							<!-- <img
 								class="composition__photo composition__photo--p3"
 								src="/img/nat-3-large.jpg"
 								alt="Photo 3"
-							/>
+							/> -->
 						</div>
 					</div>
 				</div>
@@ -490,7 +515,7 @@
 		<footer class="footer">
 			<div class="footer__logo-box">
 				<picture class="footer__logo">
-					<!-- source fpr phones below 600px uses small logo -->
+					<!-- source for phones below 600px uses small logo -->
 					<!-- resolution switching and inside it applies density switching -->
 					<source
 						srcset="
