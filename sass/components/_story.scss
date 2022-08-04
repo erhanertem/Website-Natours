@@ -34,12 +34,18 @@
 		float: left;
 		width: 15rem;
 		height: 15rem;
-		// // shape-outside only works if there is float,width and height properties defined
-		// text wrapping the picture effect
-		margin: 2rem 2rem 2rem 0;
-		shape-outside: content-box circle(50% at 50% 50%);
-		shape-margin: 2rem;
-		clip-path: circle(50% at 50% 50%);
+		overflow: hidden;
+
+		// if clippath either form is supported by the browser implement clip-path
+		@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+			-webkit-clip-path: circle(50% at 50% 50%);
+			clip-path: circle(50% at 50% 50%);
+			// shape-outside only works if there is float,width and height properties defined
+			// text wrapping the picture effect
+			shape-outside: content-box circle(50% at 50% 50%);
+			shape-margin: 2rem;
+			margin: 2rem 2rem 2rem 0;
+		}
 
 		position: relative;
 

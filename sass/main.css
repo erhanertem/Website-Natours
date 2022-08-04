@@ -660,12 +660,17 @@ body {
   float: left;
   width: 15rem;
   height: 15rem;
-  margin: 2rem 2rem 2rem 0;
-  shape-outside: content-box circle(50% at 50% 50%);
-  shape-margin: 2rem;
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
+  overflow: hidden;
   position: relative;
+}
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
+  .story__shape {
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: content-box circle(50% at 50% 50%);
+    shape-margin: 2rem;
+    margin: 2rem 2rem 2rem 0;
+  }
 }
 @media (max-width: 37.5em) {
   .story__shape {
