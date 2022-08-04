@@ -410,7 +410,7 @@
 
 			<!-- BOOKING SECTION -->
 			<section class="section-book">
-				<div class="row row__tab-portrait">
+				<div class="row row__section-book--mod">
 					<div class="book">
 						<div class="book__form">
 							<!-- BOOKING SECTION FORM -->
@@ -491,6 +491,7 @@
 			<div class="footer__logo-box">
 				<picture class="footer__logo">
 					<!-- source fpr phones below 600px uses small logo -->
+					<!-- resolution switching and inside it applies density switching -->
 					<source
 						srcset="
 							img/logo-green-small-1x.png 1x,
@@ -499,6 +500,7 @@
 						media="(max-width: 37.5em)"
 					/>
 					<!-- img above 600px screen sizes use below -->
+					<!-- inside it applies density switching -->
 					<!-- src replaced by srcset attribute allows us to set multiple resolution images in one go such as sets x1 hdr screens with -1x version of the img and 2x descriptor sets the other -->
 					<img
 						class="footer__logo"
@@ -507,7 +509,7 @@
 					/>
 				</picture>
 			</div>
-			<div class="row">
+			<div class="row row__footer--mod">
 				<!-- left wing -->
 				<div class="col-1-of-2">
 					<div class="footer__navigation">

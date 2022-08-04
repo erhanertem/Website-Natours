@@ -13,12 +13,18 @@
 		padding: 0 3rem;
 	}
 
-	&__tab-portrait {
+	&__section-book--mod {
 		@include break($tablet-portrait) {
 			max-width: 75rem;
 		}
 		@include break($phone) {
 			max-width: 65rem;
+		}
+	}
+
+	&__footer--mod {
+		@include break($tablet-landscape) {
+			width: 85%;
 		}
 	}
 

@@ -30,6 +30,10 @@
 
 		display: inline-block; //occupies as the same width as the links
 
+		@include break($tablet-landscape) {
+			width: 90%;
+			text-align: center;
+		}
 		@include break($tablet-portrait) {
 			width: 100%;
 			text-align: center;
@@ -76,6 +80,9 @@
 		width: 80%;
 		float: right;
 
+		@include break($tablet-landscape) {
+			width: 90%;
+		}
 		@include break($tablet-portrait) {
 			width: 100%;
 		}
