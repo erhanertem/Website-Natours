@@ -134,11 +134,12 @@
 							  STEP 2. [size] defines breakpoints and the last as a default img size to let the browser choose from
                 STEP 3. if none makes sense for the browser, [src] is executed. 
 							-->
+							<!-- IMPORTANT: Media queriers are always in em values not pixel for widths -->
 							<img
 								class="composition__photo composition__photo--p1"
 								alt="Photo 1"
 								srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
-								size="(max-width: 900px) 18vw, (max-width: 600px) 24vw, 297px"
+								size="(max-width: 56.25em) 18vw, (max-width: 37.5em) 24vw, 297px"
 								src="img/nat-1-large.jpg"
 							/>
 							<!-- 297px width of img at 1200px+ breakpoint defaults      -->
@@ -148,7 +149,7 @@
 								class="composition__photo composition__photo--p2"
 								alt="Photo 2"
 								srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
-								size="(max-width: 900px) 19vw, (max-width: 600px) 26vw, 297px"
+								size="(max-width: 56.25em) 19vw, (max-width: 37.5em) 26vw, 297px"
 								src="img/nat-2-large.jpg"
 							/>
 							<!-- 297px width of img at 1200px+ breakpoint defaults      -->
@@ -163,7 +164,7 @@
 								class="composition__photo composition__photo--p3"
 								alt="Photo 3"
 								srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
-								size="(max-width: 900px) 16vw, (max-width: 600px) 22vw, 297px"
+								size="(max-width: 56.25em) 16vw, (max-width: 37.5em) 22vw, 297px"
 								src="img/nat-3-large.jpg"
 							/>
 							<!-- 297px width of img at 1200px+ breakpoint defaults      -->
@@ -526,6 +527,7 @@
 				<picture class="footer__logo">
 					<!-- source for phones below 600px uses small logo -->
 					<!-- resolution switching and inside it applies density switching -->
+					<!-- IMPORTANT: Media queriers are always in em values not pixel for widths -->
 					<source
 						srcset="
 							img/logo-green-small-1x.png 1x,
