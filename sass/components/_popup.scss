@@ -11,6 +11,13 @@
 	top: 0;
 	left: 0;
 
+	// blur the background not in focus and lighten the black dimming from .8 to .3 if blur is supported by the browser
+	@support (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		background-color: rgba($color-black, 0.3);
+	}
+
 	/* Hide the popup @ initial state */
 	/* NOTE: Hide the elements - display: none is not animatable so we dont use it here */
 	/* 1) Hide it visually but links seize to exist active */
@@ -19,6 +26,10 @@
 	pointer-events: none;
 	/* 3)  Hide it from screen readers */
 	visibility: hidden;
+
+	-webkit-transition: all 0.3s;
+
+	-o-transition: all 0.3s;
 
 	transition: all 0.3s;
 
@@ -48,6 +59,10 @@
 
 			display: inline-block;
 
+			-webkit-transition: all 0.3s;
+
+			-o-transition: all 0.3s;
+
 			transition: all 0.3s;
 		}
 
@@ -62,6 +77,7 @@
 		border-radius: 3px;
 		overflow: hidden;
 		background-color: $color-white;
+		-webkit-box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
 		box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
 
 		// centerline to popup background
@@ -69,8 +85,12 @@
 
 		// set intitial state for the popup__content box animation
 		opacity: 0;
+		-webkit-transform: translate(-50%, -50%) scale(0.3);
+		-ms-transform: translate(-50%, -50%) scale(0.3);
 		transform: translate(-50%, -50%) scale(0.3);
 		// IMPORTANT: since mixin absCenter also has a transform, needs to be included here as well otherwise one overrides another. Only one transform could live within a block!!
+		-webkit-transition: all 0.3s 0.3s;
+		-o-transition: all 0.3s 0.3s;
 		transition: all 0.3s 0.3s;
 		//second timing is for the delay. With that black transparent background gets loaded first and popup appears the next.
 
@@ -82,6 +102,8 @@
 	&:target &__content {
 		// set intitial state for the popup__content box animation
 		opacity: 1;
+		-webkit-transform: translate(-50%, -50%) scale(1);
+		-ms-transform: translate(-50%, -50%) scale(1);
 		transform: translate(-50%, -50%) scale(1);
 	}
 
@@ -107,11 +129,21 @@
 		font-size: 1.4rem;
 		margin-bottom: 4rem;
 
+		-webkit-column-count: 2;
+
+		-moz-column-count: 2;
+
 		column-count: 2; // 2 columns of text
+		-webkit-column-gap: 4em;
+		-moz-column-gap: 4em;
 		column-gap: 4em; //1em = 14px -current font size
+		-webkit-column-rule: 1px solid $color-grey-light-2;
+		-moz-column-rule: 1px solid $color-grey-light-2;
 		column-rule: 1px solid $color-grey-light-2;
 
 		// hypenation
+		-webkit-hyphens: auto;
+		-ms-hyphens: auto;
 		hyphens: auto;
 	}
 }

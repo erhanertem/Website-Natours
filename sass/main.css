@@ -854,6 +854,13 @@ body {
   visibility: hidden;
   transition: all 0.3s;
 }
+@support (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+  .popup {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
 .popup:target {
   /* Unhide the popup after anchot element clicked */
   /* NOTE: Hide the elements - display: none is not animatable so we dont use it here */
@@ -915,14 +922,14 @@ body {
   font-size: 1.4rem;
   margin-bottom: 4rem;
   -moz-column-count: 2;
-       column-count: 2;
+  column-count: 2;
   -moz-column-gap: 4em;
-       column-gap: 4em;
+  column-gap: 4em;
   -moz-column-rule: 1px solid #eee;
-       column-rule: 1px solid #eee;
+  column-rule: 1px solid #eee;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .header {
@@ -942,7 +949,7 @@ body {
 }
 @media (min-width: 100em) {
   .header {
-    background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   }
 }
 @media (max-width: 75em) {
