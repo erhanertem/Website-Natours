@@ -4,6 +4,7 @@
 
 Installed NPM package dependencies:
 
-| Package command                  | Package link                            | Description      |
-| -------------------------------- | --------------------------------------- | ---------------- |
-| npm install node-sass --save-dev | https://www.npmjs.com/package/node-sass | CSS preprocessor |
+| Package command                  | Package link                            | Description                |
+| -------------------------------- | --------------------------------------- | -------------------------- |
+| npm install node-sass --save-dev | https://www.npmjs.com/package/node-sass | CSS preprocessor           |
+| npm install concat --save-dev    | https://www.npmjs.com/package/concat    | Concatenate multiple files |

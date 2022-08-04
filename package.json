@@ -4,11 +4,14 @@
 	"description": "Landing page for natours",
 	"main": "index.js",
 	"scripts": {
-		"compile:sass": "node-sass sass/main.scss css/style.css -w"
+		"watch:sass": "node-sass sass/main.scss css/style.css -w",
+		"compile:sass": "node-sass sass/main.scss css/style.comp.css",
+		"concat:css": ""
 	},
 	"author": "Erhan ERTEM",
 	"license": "ISC",
 	"devDependencies": {
+		"concat": "^1.0.3",
 		"node-sass": "^7.0.1"
 	}
 }
