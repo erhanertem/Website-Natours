@@ -854,7 +854,7 @@ body {
   visibility: hidden;
   transition: all 0.3s;
 }
-@support (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
   .popup {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
