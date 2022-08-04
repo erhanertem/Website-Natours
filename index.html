@@ -127,8 +127,13 @@
 					<!-- ABOUT SECTION - IMAGE COMPOSITION BLOCK -->
 					<div class="col-1-of-2">
 						<div class="composition">
-							<!-- RESOLUTION SWITCHING IMAGE OPERATION -->
+							<!-- RESOLUTION SWITCHING IMAGE METHODOLOGY -->
 							<!-- This method do not use picture and source tags but make use of attributes [srcset] and [size] media conditions -->
+							<!-- 
+								STEP 1. [srcset] lists each available imgs name and respective widths 
+							  STEP 2. [size] defines breakpoints and the last as a default img size to let the browser choose from
+                STEP 3. if none makes sense for the browser, [src] is executed. 
+							-->
 							<img
 								class="composition__photo composition__photo--p1"
 								alt="Photo 1"
@@ -516,8 +521,8 @@
 
 		<footer class="footer">
 			<div class="footer__logo-box">
-				<!-- ART DIRECTION RESPONSIVE IMAGE APPLICATION -->
-				<!-- ART Direction utilizes picture and source elements for differing breakpoint conditions -->
+				<!-- ART DIRECTION RESPONSIVE IMAGE METHODOLOGY -->
+				<!-- ART Direction utilizes picture and source elements for differing breakpoint conditions. Basically the browser is forced to choose the images based on the provided breakpoints -->
 				<picture class="footer__logo">
 					<!-- source for phones below 600px uses small logo -->
 					<!-- resolution switching and inside it applies density switching -->
