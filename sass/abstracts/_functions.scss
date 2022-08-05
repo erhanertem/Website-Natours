@@ -1,4 +1,4 @@
 // partial files always start with an underscore
 @function base-font-size($target_font_size) {
-	@return percentage(calc($target_font_size/16px));
+	@return ((calc($target_font_size/16px))/100);
 }
