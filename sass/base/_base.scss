@@ -1,6 +1,7 @@
 // partial files always start with an underscore
-
-//global definitions are rregistered here
+@import "../abstracts/variables";
+//
+//global definitions are registered here
 /* universal reset which includes after and before pseudo elements as well - we increased the spectrum of coverage */
 *,
 *::after,
@@ -61,4 +62,9 @@ body {
 html,
 body {
 	overflow-x: hidden;
+}
+
+::selection {
+	background-color: $color-primary;
+	color: $color-white;
 }
