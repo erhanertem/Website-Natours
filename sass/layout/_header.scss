@@ -27,7 +27,9 @@
 	// Responsive image implementation in CSS.
 	// If HDPI screen and above 600px~ 600/16 = 37.5em  breakpoint threshold use hero.jpg else default to hero-small.jpg disclosed above
 	// Media queriers are always in em values not pixel for widths
-	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em) {
+	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+		only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+		only screen and (min-width: 100em) {
 		background-image: linear-gradient(
 				to right bottom,
 				rgba($color-primary-light, 0.8),
@@ -36,15 +38,16 @@
 			url(../img/hero.jpg);
 	}
 
-	// If screen is not a HDPI and above 1600px~ 1600/16=100em breakpoint threshold use hero.jpg
-	@media only screen and (min-width: 100em) {
-		background-image: linear-gradient(
-				to right bottom,
-				rgba($color-primary-light, 0.8),
-				rgba($color-primary-dark, 0.8)
-			),
-			url(../img/hero.jpg);
-	}
+	// moved to above code as the third condition since the outut is same
+	// // If screen is not a HDPI and above 1600px~ 1600/16=100em breakpoint threshold use hero.jpg
+	// @media only screen and (min-width: 100em) {
+	// 	background-image: linear-gradient(
+	// 			to right bottom,
+	// 			rgba($color-primary-light, 0.8),
+	// 			rgba($color-primary-dark, 0.8)
+	// 		),
+	// 		url(../img/hero.jpg);
+	// }
 
 	@include break($tablet-landscape) {
 		clip-path: polygon(0 0, 100% 0, 100% 82vh, 0 100%);
