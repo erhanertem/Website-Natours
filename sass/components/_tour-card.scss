@@ -198,7 +198,9 @@
 
 	//very dramatic changes here - almost a rewrite of the entire section based on mobile touch experience
 	// __card's media query
-	@include break($tablet-portrait) {
+	// @include break($tablet-portrait) {
+	// tablets cant bear hover effects so we needed to add hover:none condition manually thats why we had to switch to @media and leave selective SASS function @media query definition
+	@media only screen and (max-width: 56.25em), only screen and (hover: none) {
 		height: auto;
 		background-color: $color-white;
 		// the back&front cards gets together the box shadow
@@ -258,7 +260,6 @@
 
 		&__price-value {
 			font-size: 4rem;
-			font-weight: 100;
 		}
 	}
 }
