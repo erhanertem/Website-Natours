@@ -67,7 +67,7 @@
 			rgba($color-white, 0.9) 50%,
 			transparent 50%
 		),
-		url(../../img/nat-10.jpg); // assign image
+		url(../img/nat-10.jpg); // assign image
 	background-size: 100%; // determiens the background tiling - takes the whole width/height to remain single tile
 	border-radius: 3px; // round corners of the background image
 	height: 50rem; // height of the background image content
@@ -80,7 +80,7 @@
 				rgba($color-white, 0.9) 60%,
 				transparent 60%
 			),
-			url(../../img/nat-10.jpg);
+			url(../img/nat-10.jpg);
 		background-size: cover;
 		margin: 0 8rem 0 8rem;
 	}
@@ -90,7 +90,7 @@
 				rgba($color-white, 0.9) 0%,
 				rgba($color-white, 0.9) 100%
 			),
-			url(../../img/nat-10.jpg);
+			url(../img/nat-10.jpg);
 		margin: 0rem;
 	}
 

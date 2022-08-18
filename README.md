@@ -1,6 +1,8 @@
 # Udemy Advanced CSS and Sass: Flexbox, Grid, Animations and More! by Jonas Schmedtmann
 
-## **Objective:** Natours web page - Create an imaginary web page covering the advanced principles of CSS and SASS
+## **Objective:** Natours web page - Create an imaginary tours web page covering the advanced principles of CSS and SASS
+- Establish SASS 7-1 folder structure
+- Explore Animating CTA cards, full screen menu, svg icons, font/icon color gradients, video background, hover effects, forms fields/button and customizations
 
 ### **Erhan ERTEM**
 
@@ -17,4 +19,3 @@
 | npm install autoprefixer --save-dev | https://www.npmjs.com/package/autoprefixer | Add vendor prefixes to CSS, a PostCSS plugin                     |
 | npm install postcss-cli --save-dev  | https://www.npmjs.com/package/postcss-cli  | Node package dependancy for autoprefixer                         |
 | npm install npm-run-all --save-dev  | https://www.npmjs.com/package/npm-run-all  | A CLI tool to run multiple npm-scripts in parallel or sequential |
-|                               |                                            |                                                                  |
