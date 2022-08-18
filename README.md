@@ -9,6 +9,10 @@
 - Establish SASS 7-1 folder structure
 - Explore Animating CTA cards, full screen menu, svg icons, font/icon color gradients, video background, hover effects, forms fields/button and customizations
 
+&emsp;
+
+#### Link to Project &rarr; [Natours Project](https://natours-erhan-ertem.netlify.app)
+
 ---
 
 > ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
