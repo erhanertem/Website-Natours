@@ -4,20 +4,23 @@
 
 ## Udemy Advanced CSS and Sass: Flexbox, Grid, Animations and More! by Jonas Schmedtmann
 
-### **Objective:** Natours web page - Create web page for a fictional tour company covering the advanced principles of CSS and SASS
+### **Objective:** Natours web page - Create web page for a tour company covering the advanced principles of CSS and SASS
 
-- Establish SASS 7-1 folder structure
-- Explore Animating CTA cards, full screen menu, svg icons, font/icon color gradients, video background, hover effects, forms fields/button and customizations
+-  Establish SASS 7-1 folder structure
+-  Explore Animating CTA cards, full screen menu, svg icons, font/icon color gradients, video background, hover effects,
+   forms fields/button and customizations
 
 &emsp;
 
-#### Link to Project &rarr; [Natours Project](https://natours-erhan-ertem.netlify.app)
+#### [Natours Project](https://natours-erhan-ertem.netlify.app)
 
-![Screenshot](screenshot.gif)
+<img src="./screenshot.webp" width="500px"/>
 
 ---
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=square&logo=css3&logoColor=white)
+![SASS](https://img.shields.io/badge/Sass-CC6699?style=square&logo=sass&logoColor=white)
 
 <details>
 <summary>Installed NPM packages and utilized APIs:</summary>
